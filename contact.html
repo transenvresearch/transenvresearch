@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TECRC for research collaborations, donations, or volunteer opportunities. We're dedicated to connecting environmental science with clinical medicine.">
     <title>Contact Us - TECRC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,6 +19,11 @@
                 <p class="tagline">Translational Environmental Clinical Research Center</p>
             </div>
             <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -34,32 +41,47 @@
         </div>
     </section>
 
-    <section class="contact-info">
+    <section class="contact-options">
         <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="section-intro">We welcome inquiries about our research, collaboration opportunities, and ways to support our mission.</p>
+            
             <div class="contact-grid">
                 <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/email-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>General Inquiries</h3>
                     <p>For general information about TECRC and our programs:</p>
-                    <p><strong>Email:</strong> info@tecrc.org</p>
-                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@tecrc.org">info@tecrc.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
                 </div>
                 <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/research-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Research Collaboration</h3>
                     <p>To discuss potential research partnerships:</p>
-                    <p><strong>Email:</strong> research@tecrc.org</p>
-                    <p><strong>Phone:</strong> (555) 123-4568</p>
+                    <p><strong>Email:</strong> <a href="mailto:research@tecrc.org">research@tecrc.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234568">(555) 123-4568</a></p>
                 </div>
                 <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/media-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Media Inquiries</h3>
                     <p>For press and media-related questions:</p>
-                    <p><strong>Email:</strong> media@tecrc.org</p>
-                    <p><strong>Phone:</strong> (555) 123-4569</p>
+                    <p><strong>Email:</strong> <a href="mailto:media@tecrc.org">media@tecrc.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234569">(555) 123-4569</a></p>
                 </div>
                 <div class="contact-card">
+                    <div class="card-icon">
+                        <img src="images/careers-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Volunteer & Careers</h3>
                     <p>To learn about volunteering or employment opportunities:</p>
-                    <p><strong>Email:</strong> careers@tecrc.org</p>
-                    <p><strong>Phone:</strong> (555) 123-4570</p>
+                    <p><strong>Email:</strong> <a href="mailto:careers@tecrc.org">careers@tecrc.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234570">(555) 123-4570</a></p>
                 </div>
             </div>
         </div>
@@ -67,35 +89,50 @@
 
     <section class="contact-form" id="message">
         <div class="container">
-            <h2>Send Us a Message</h2>
-            <p>We'd love to hear from you. Please fill out the form below and we'll respond as soon as possible.</p>
-            <form action="#" method="POST" class="contact-form-container">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="form-container">
+                <div class="form-content">
+                    <h2>Send Us a Message</h2>
+                    <p>We'd love to hear from you. Please fill out the form below and we'll respond as soon as possible.</p>
+                    <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form-container">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="research">Research Collaboration</option>
+                                    <option value="volunteer">Volunteering</option>
+                                    <option value="donation">Donation Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-image">
+                    <img src="images/contact-image.jpg" alt="TECRC researchers collaborating" loading="lazy">
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject">
-                        <option value="general">General Inquiry</option>
-                        <option value="research">Research Collaboration</option>
-                        <option value="volunteer">Volunteering</option>
-                        <option value="donation">Donation Information</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <div class="form-group full-width">
-                    <button type="submit" class="btn">Send Message</button>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -103,22 +140,30 @@
         <div class="container">
             <h2>Our Location</h2>
             <div class="location-grid">
-                <div class="map-placeholder">
+                <div class="map-container">
                     <!-- This would be replaced with an actual map iframe in production -->
-                    <div class="map-image">Map Placeholder</div>
+                    <div class="map-image">
+                        <img src="images/map-placeholder.jpg" alt="Map showing location of TECRC office" loading="lazy">
+                    </div>
                 </div>
                 <div class="address-info">
-                    <h3>Main Office</h3>
-                    <p>123 Research Boulevard<br>
-                    Suite 456<br>
-                    Anytown, ST 12345</p>
-                    
-                    <h4>Hours of Operation</h4>
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
-                    Saturday - Sunday: Closed</p>
-                    
-                    <h4>Directions</h4>
-                    <p>Our office is located in the Research District, easily accessible by public transportation. The nearest bus stop is at Research Blvd & Science St. If driving, visitor parking is available in the adjacent parking structure.</p>
+                    <div class="address-card">
+                        <h3>Main Office</h3>
+                        <address>
+                            123 Research Boulevard<br>
+                            Suite 456<br>
+                            Anytown, ST 12345
+                        </address>
+                        
+                        <h4>Hours of Operation</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                        Saturday - Sunday: Closed</p>
+                        
+                        <h4>Directions</h4>
+                        <p>Our office is located in the Research District, easily accessible by public transportation. The nearest bus stop is at Research Blvd & Science St. If driving, visitor parking is available in the adjacent parking structure.</p>
+                        
+                        <a href="https://maps.google.com/?q=123+Research+Boulevard+Anytown" target="_blank" class="btn btn-alt">Get Directions</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,22 +172,50 @@
     <section id="donate" class="donation-section">
         <div class="container">
             <h2>Support Our Mission</h2>
-            <p>Your donations help us continue our important work investigating environmental impacts on human health and developing solutions.</p>
+            <p class="section-intro">Your donations help us continue our important work investigating environmental impacts on human health and developing solutions.</p>
             
             <div class="donation-options">
                 <div class="donation-option">
+                    <div class="option-icon">
+                        <img src="images/donate-once-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>One-Time Donation</h3>
                     <p>Make a single contribution to support our research and educational initiatives.</p>
+                    <div class="amount-buttons">
+                        <button class="amount-btn">$25</button>
+                        <button class="amount-btn">$50</button>
+                        <button class="amount-btn">$100</button>
+                        <button class="amount-btn">$250</button>
+                        <button class="amount-btn custom">Custom</button>
+                    </div>
                     <a href="#" class="btn">Donate Now</a>
                 </div>
                 <div class="donation-option">
+                    <div class="option-icon">
+                        <img src="images/donate-monthly-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Monthly Giving</h3>
                     <p>Become a sustaining donor with a recurring monthly contribution.</p>
+                    <div class="amount-buttons">
+                        <button class="amount-btn">$10</button>
+                        <button class="amount-btn">$25</button>
+                        <button class="amount-btn">$50</button>
+                        <button class="amount-btn">$100</button>
+                        <button class="amount-btn custom">Custom</button>
+                    </div>
                     <a href="#" class="btn">Become a Monthly Donor</a>
                 </div>
                 <div class="donation-option">
+                    <div class="option-icon">
+                        <img src="images/donate-major-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Major Gifts</h3>
                     <p>For substantial contributions or to discuss naming opportunities, please contact our development team.</p>
+                    <ul class="donation-benefits">
+                        <li>Support specific research projects</li>
+                        <li>Fund educational initiatives</li>
+                        <li>Establish endowments</li>
+                    </ul>
                     <a href="mailto:development@tecrc.org" class="btn">Contact Development</a>
                 </div>
             </div>
@@ -156,32 +229,67 @@
     <section id="volunteer" class="volunteer-section">
         <div class="container">
             <h2>Volunteer Opportunities</h2>
-            <p>We welcome volunteers who want to contribute to our mission. Here are some ways you can get involved:</p>
+            <p class="section-intro">We welcome volunteers who want to contribute to our mission. Here are some ways you can get involved:</p>
             
             <div class="volunteer-options">
                 <div class="volunteer-option">
+                    <div class="option-icon">
+                        <img src="images/research-support-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Research Support</h3>
                     <p>Assist our research teams with data collection, literature reviews, and other research-related tasks.</p>
+                    <ul class="volunteer-details">
+                        <li>Literature review assistance</li>
+                        <li>Data entry and analysis</li>
+                        <li>Research participant coordination</li>
+                    </ul>
                 </div>
                 <div class="volunteer-option">
+                    <div class="option-icon">
+                        <img src="images/community-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Community Outreach</h3>
                     <p>Help us educate the public about environmental health issues through events and educational programs.</p>
+                    <ul class="volunteer-details">
+                        <li>Event planning and coordination</li>
+                        <li>Educational program facilitation</li>
+                        <li>Public awareness campaigns</li>
+                    </ul>
                 </div>
                 <div class="volunteer-option">
+                    <div class="option-icon">
+                        <img src="images/admin-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Administrative Support</h3>
                     <p>Provide valuable assistance with office tasks, event planning, and communications.</p>
+                    <ul class="volunteer-details">
+                        <li>Office administration</li>
+                        <li>Document preparation</li>
+                        <li>Communications support</li>
+                    </ul>
                 </div>
                 <div class="volunteer-option">
+                    <div class="option-icon">
+                        <img src="images/professional-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Professional Services</h3>
                     <p>Offer your professional expertise in areas such as legal, accounting, IT, marketing, or design.</p>
+                    <ul class="volunteer-details">
+                        <li>Pro bono professional services</li>
+                        <li>Skills-based volunteering</li>
+                        <li>Advisory roles</li>
+                    </ul>
                 </div>
             </div>
             
             <div class="volunteer-cta">
-                <p>To learn more about our volunteer opportunities, please contact our volunteer coordinator:</p>
-                <p><strong>Email:</strong> volunteer@tecrc.org</p>
-                <p><strong>Phone:</strong> (555) 123-4571</p>
-                <a href="#message" class="btn">Contact Us About Volunteering</a>
+                <div class="volunteer-cta-content">
+                    <h3>Ready to Make a Difference?</h3>
+                    <p>To learn more about our volunteer opportunities, please contact our volunteer coordinator:</p>
+                    <p><strong>Email:</strong> <a href="mailto:volunteer@tecrc.org">volunteer@tecrc.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234571">(555) 123-4571</a></p>
+                    <a href="#message" class="btn">Contact Us About Volunteering</a>
+                </div>
             </div>
         </div>
     </section>
@@ -206,11 +314,15 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>Email: info@tecrc.org</p>
-                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: <a href="mailto:info@tecrc.org">info@tecrc.org</a></p>
+                    <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <div class="social-links">
-                        <a href="#" target="_blank">Twitter</a>
-                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank" aria-label="Follow us on Twitter">
+                            <img src="images/twitter-icon.svg" alt="Twitter" width="24" height="24">
+                        </a>
+                        <a href="#" target="_blank" aria-label="Connect with us on LinkedIn">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -219,5 +331,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <img src="images/arrow-up.svg" alt="" aria-hidden="true">
+    </button>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
