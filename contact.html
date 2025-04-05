@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TECRC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TECRC</h1>
+                <p class="tagline">Translational Environmental Clinical Research Center</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>General Inquiries</h3>
+                    <p>For general information about TECRC and our programs:</p>
+                    <p><strong>Email:</strong> info@tecrc.org</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Research Collaboration</h3>
+                    <p>To discuss potential research partnerships:</p>
+                    <p><strong>Email:</strong> research@tecrc.org</p>
+                    <p><strong>Phone:</strong> (555) 123-4568</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Media Inquiries</h3>
+                    <p>For press and media-related questions:</p>
+                    <p><strong>Email:</strong> media@tecrc.org</p>
+                    <p><strong>Phone:</strong> (555) 123-4569</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Volunteer & Careers</h3>
+                    <p>To learn about volunteering or employment opportunities:</p>
+                    <p><strong>Email:</strong> careers@tecrc.org</p>
+                    <p><strong>Phone:</strong> (555) 123-4570</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form" id="message">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <p>We'd love to hear from you. Please fill out the form below and we'll respond as soon as possible.</p>
+            <form action="#" method="POST" class="contact-form-container">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="research">Research Collaboration</option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="donation">Donation Information</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="location-grid">
+                <div class="map-placeholder">
+                    <!-- This would be replaced with an actual map iframe in production -->
+                    <div class="map-image">Map Placeholder</div>
+                </div>
+                <div class="address-info">
+                    <h3>Main Office</h3>
+                    <p>123 Research Boulevard<br>
+                    Suite 456<br>
+                    Anytown, ST 12345</p>
+                    
+                    <h4>Hours of Operation</h4>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                    Saturday - Sunday: Closed</p>
+                    
+                    <h4>Directions</h4>
+                    <p>Our office is located in the Research District, easily accessible by public transportation. The nearest bus stop is at Research Blvd & Science St. If driving, visitor parking is available in the adjacent parking structure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="donation-section">
+        <div class="container">
+            <h2>Support Our Mission</h2>
+            <p>Your donations help us continue our important work investigating environmental impacts on human health and developing solutions.</p>
+            
+            <div class="donation-options">
+                <div class="donation-option">
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution to support our research and educational initiatives.</p>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                <div class="donation-option">
+                    <h3>Monthly Giving</h3>
+                    <p>Become a sustaining donor with a recurring monthly contribution.</p>
+                    <a href="#" class="btn">Become a Monthly Donor</a>
+                </div>
+                <div class="donation-option">
+                    <h3>Major Gifts</h3>
+                    <p>For substantial contributions or to discuss naming opportunities, please contact our development team.</p>
+                    <a href="mailto:development@tecrc.org" class="btn">Contact Development</a>
+                </div>
+            </div>
+            
+            <div class="tax-info">
+                <p>The Translational Environmental Clinical Research Center Inc. is a registered 501(c)(3) non-profit organization. All donations are tax-deductible to the extent allowed by law.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="volunteer" class="volunteer-section">
+        <div class="container">
+            <h2>Volunteer Opportunities</h2>
+            <p>We welcome volunteers who want to contribute to our mission. Here are some ways you can get involved:</p>
+            
+            <div class="volunteer-options">
+                <div class="volunteer-option">
+                    <h3>Research Support</h3>
+                    <p>Assist our research teams with data collection, literature reviews, and other research-related tasks.</p>
+                </div>
+                <div class="volunteer-option">
+                    <h3>Community Outreach</h3>
+                    <p>Help us educate the public about environmental health issues through events and educational programs.</p>
+                </div>
+                <div class="volunteer-option">
+                    <h3>Administrative Support</h3>
+                    <p>Provide valuable assistance with office tasks, event planning, and communications.</p>
+                </div>
+                <div class="volunteer-option">
+                    <h3>Professional Services</h3>
+                    <p>Offer your professional expertise in areas such as legal, accounting, IT, marketing, or design.</p>
+                </div>
+            </div>
+            
+            <div class="volunteer-cta">
+                <p>To learn more about our volunteer opportunities, please contact our volunteer coordinator:</p>
+                <p><strong>Email:</strong> volunteer@tecrc.org</p>
+                <p><strong>Phone:</strong> (555) 123-4571</p>
+                <a href="#message" class="btn">Contact Us About Volunteering</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>TECRC</h3>
+                    <p>Translational Environmental Clinical Research Center Inc.</p>
+                    <p>A 501(c)(3) Non-Profit Organization</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@tecrc.org</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Translational Environmental Clinical Research Center Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
