@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse TECRC's research publications on environmental health impacts including air quality, water contaminants, climate change, and environmental toxins.">
     <title>Publications - TECRC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,6 +19,11 @@
                 <p class="tagline">Translational Environmental Clinical Research Center</p>
             </div>
             <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -46,7 +53,6 @@
                         <label for="year-filter">Year</label>
                         <select id="year-filter">
                             <option value="all">All Years</option>
-                            <option value="2025">2025</option>
                             <option value="2024">2024</option>
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
@@ -69,7 +75,6 @@
                             <option value="journal">Journal Articles</option>
                             <option value="review">Review Papers</option>
                             <option value="clinical">Clinical Guidelines</option>
-                            <option value="report">Technical Reports</option>
                         </select>
                     </div>
                 </div>
@@ -81,132 +86,110 @@
         <div class="container">
             <h2>Recent Publications</h2>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2024" data-topic="air-quality" data-type="journal">
                 <div class="pub-year">2024</div>
                 <div class="pub-content">
                     <h3>Long-term PM2.5 Exposure and Respiratory Function Decline: A Multi-center Cohort Study</h3>
                     <p class="pub-authors">Smith J, Johnson D, Rodriguez M, Chen R, et al.</p>
                     <p class="pub-journal"><em>Environmental Health Perspectives</em>, 132(4), 047003.</p>
-                    <p class="pub-abstract">This study examines the relationship between long-term exposure to fine particulate matter (PM2.5) and respiratory function decline in a diverse urban population. Using a novel biomarker panel, we identified individuals with heightened sensitivity to air pollution effects.</p>
+                    <div class="pub-abstract">
+                        <p>This study examines the relationship between long-term exposure to fine particulate matter (PM2.5) and respiratory function decline in a diverse urban population. Using a novel biomarker panel, we identified individuals with heightened sensitivity to air pollution effects.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag air-quality">Air Quality</span>
                         <span class="tag journal">Journal Article</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2024" data-topic="water-contaminants" data-type="clinical">
                 <div class="pub-year">2024</div>
                 <div class="pub-content">
                     <h3>PFAS Exposure Through Drinking Water: Clinical Screening Recommendations</h3>
                     <p class="pub-authors">Rodriguez M, Smith J, Anderson P, Wilson T, et al.</p>
                     <p class="pub-journal"><em>Journal of Clinical Environmental Medicine</em>, 15(2), 112-128.</p>
-                    <p class="pub-abstract">This paper presents evidence-based clinical screening recommendations for patients with potential exposure to per- and polyfluoroalkyl substances (PFAS) through contaminated drinking water. We propose a tiered screening approach based on exposure risk assessment.</p>
+                    <div class="pub-abstract">
+                        <p>This paper presents evidence-based clinical screening recommendations for patients with potential exposure to per- and polyfluoroalkyl substances (PFAS) through contaminated drinking water. We propose a tiered screening approach based on exposure risk assessment.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag water-contaminants">Water Contaminants</span>
                         <span class="tag clinical">Clinical Guidelines</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2023" data-topic="climate-change" data-type="review">
                 <div class="pub-year">2023</div>
                 <div class="pub-content">
                     <h3>Shifting Vector-Borne Disease Patterns in North America: Climate Change Implications for Clinical Practice</h3>
                     <p class="pub-authors">Chen R, Rodriguez M, Smith J, Brown L, et al.</p>
                     <p class="pub-journal"><em>PLOS Climate</em>, 2(6), e0000154.</p>
-                    <p class="pub-abstract">This review analyzes the northward expansion of vector-borne diseases in North America in relation to climate change patterns. We present predictive models for disease emergence in previously unaffected regions and provide clinical guidance for healthcare providers in these areas.</p>
+                    <div class="pub-abstract">
+                        <p>This review analyzes the northward expansion of vector-borne diseases in North America in relation to climate change patterns. We present predictive models for disease emergence in previously unaffected regions and provide clinical guidance for healthcare providers in these areas.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag climate-change">Climate Change</span>
                         <span class="tag review">Review Paper</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2023" data-topic="toxins" data-type="journal">
                 <div class="pub-year">2023</div>
                 <div class="pub-content">
                     <h3>Heavy Metal Exposure and Cardiovascular Risk: A Translational Approach</h3>
                     <p class="pub-authors">Johnson D, Smith J, Garcia N, Zhang Y, et al.</p>
                     <p class="pub-journal"><em>Environmental Science & Technology</em>, 57(12), 4856-4871.</p>
-                    <p class="pub-abstract">This study identifies novel biomarkers for chronic low-level heavy metal exposure and their association with cardiovascular disease risk factors. We developed a risk assessment algorithm that can be implemented in clinical settings to screen at-risk populations.</p>
+                    <div class="pub-abstract">
+                        <p>This study identifies novel biomarkers for chronic low-level heavy metal exposure and their association with cardiovascular disease risk factors. We developed a risk assessment algorithm that can be implemented in clinical settings to screen at-risk populations.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag toxins">Environmental Toxins</span>
                         <span class="tag journal">Journal Article</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2023" data-topic="water-contaminants" data-type="journal">
                 <div class="pub-year">2023</div>
                 <div class="pub-content">
                     <h3>Microplastics in Drinking Water Sources: Analytical Methods and Health Risk Assessment</h3>
                     <p class="pub-authors">Wilson T, Johnson D, Smith J, Anderson P, et al.</p>
                     <p class="pub-journal"><em>Water Research</em>, 215, 118226.</p>
-                    <p class="pub-abstract">This paper presents improved analytical methods for detecting and characterizing microplastics in drinking water. We conducted a systematic risk assessment of human exposure through drinking water and provide recommendations for monitoring and mitigation.</p>
+                    <div class="pub-abstract">
+                        <p>This paper presents improved analytical methods for detecting and characterizing microplastics in drinking water. We conducted a systematic risk assessment of human exposure through drinking water and provide recommendations for monitoring and mitigation.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag water-contaminants">Water Contaminants</span>
                         <span class="tag journal">Journal Article</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
-            <div class="publication-item">
+            <div class="publication-item" data-year="2022" data-topic="toxins" data-type="review">
                 <div class="pub-year">2022</div>
                 <div class="pub-content">
                     <h3>Endocrine-Disrupting Chemicals and Metabolic Syndrome: Mechanisms and Clinical Implications</h3>
                     <p class="pub-authors">Smith J, Rodriguez M, Johnson D, Chen R, et al.</p>
                     <p class="pub-journal"><em>Endocrine Reviews</em>, 43(3), 501-534.</p>
-                    <p class="pub-abstract">This comprehensive review examines the evidence linking endocrine-disrupting chemical exposure to metabolic syndrome development. We outline molecular mechanisms, critical windows of exposure, and propose a clinical framework for identifying and managing environmentally-mediated metabolic disorders.</p>
+                    <div class="pub-abstract">
+                        <p>This comprehensive review examines the evidence linking endocrine-disrupting chemical exposure to metabolic syndrome development. We outline molecular mechanisms, critical windows of exposure, and propose a clinical framework for identifying and managing environmentally-mediated metabolic disorders.</p>
+                    </div>
                     <div class="pub-tags">
                         <span class="tag toxins">Environmental Toxins</span>
                         <span class="tag review">Review Paper</span>
                     </div>
-                    <a href="#" class="read-more">Read Abstract</a>
+                    <button class="toggle-abstract">Show Abstract</button>
                 </div>
             </div>
             
             <div class="load-more">
                 <button class="btn">Load More Publications</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="resources">
-        <div class="container">
-            <h2>Additional Resources</h2>
-            <div class="resources-grid">
-                <div class="resource-item">
-                    <h3>Technical Reports</h3>
-                    <p>Access our detailed technical reports providing in-depth analysis on environmental health topics.</p>
-                    <a href="#" class="btn btn-alt">View Reports</a>
-                </div>
-                <div class="resource-item">
-                    <h3>Clinical Guidelines</h3>
-                    <p>Evidence-based clinical practice guidelines for healthcare providers on environmental health concerns.</p>
-                    <a href="#" class="btn btn-alt">View Guidelines</a>
-                </div>
-                <div class="resource-item">
-                    <h3>Educational Materials</h3>
-                    <p>Resources for healthcare providers, patients, and the public on environmental health topics.</p>
-                    <a href="#" class="btn btn-alt">View Materials</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Interested in Our Research?</h2>
-            <p>Contact us to learn more about our publications or research opportunities.</p>
-            <div class="cta-buttons">
-                <a href="contact.html#research-collab" class="btn">Research Collaboration</a>
-                <a href="contact.html" class="btn btn-alt">Contact Us</a>
             </div>
         </div>
     </section>
@@ -231,11 +214,11 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>Email: info@tecrc.org</p>
-                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: <a href="mailto:info@tecrc.org">info@tecrc.org</a></p>
+                    <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <div class="social-links">
-                        <a href="#" target="_blank">Twitter</a>
-                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -244,5 +227,109 @@
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+        
+        // Publication filters
+        const yearFilter = document.getElementById('year-filter');
+        const topicFilter = document.getElementById('topic-filter');
+        const typeFilter = document.getElementById('type-filter');
+        const publications = document.querySelectorAll('.publication-item');
+        
+        function applyFilters() {
+            const yearValue = yearFilter.value;
+            const topicValue = topicFilter.value;
+            const typeValue = typeFilter.value;
+            
+            publications.forEach(pub => {
+                const pubYear = pub.getAttribute('data-year');
+                const pubTopic = pub.getAttribute('data-topic');
+                const pubType = pub.getAttribute('data-type');
+                
+                const yearMatch = yearValue === 'all' || pubYear === yearValue;
+                const topicMatch = topicValue === 'all' || pubTopic === topicValue;
+                const typeMatch = typeValue === 'all' || pubType === typeValue;
+                
+                if (yearMatch && topicMatch && typeMatch) {
+                    pub.style.display = '';
+                } else {
+                    pub.style.display = 'none';
+                }
+            });
+        }
+        
+        if (yearFilter && topicFilter && typeFilter) {
+            yearFilter.addEventListener('change', applyFilters);
+            topicFilter.addEventListener('change', applyFilters);
+            typeFilter.addEventListener('change', applyFilters);
+        }
+        
+        // Toggle abstract visibility
+        const toggleButtons = document.querySelectorAll('.toggle-abstract');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const abstract = this.parentElement.querySelector('.pub-abstract');
+                if (abstract.style.display === 'block') {
+                    abstract.style.display = 'none';
+                    this.textContent = 'Show Abstract';
+                } else {
+                    abstract.style.display = 'block';
+                    this.textContent = 'Hide Abstract';
+                }
+            });
+        });
+        
+        // Hide abstracts initially
+        document.querySelectorAll('.pub-abstract').forEach(abstract => {
+            abstract.style.display = 'none';
+        });
+        
+        // Load more button
+        const loadMoreBtn = document.querySelector('.load-more .btn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function() {
+                // This would typically load more publications
+                // For now, we'll just show a message
+                this.textContent = 'No more publications to load';
+                this.disabled = true;
+            });
+        }
+        
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Initially hide the button
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+    </script>
 </body>
 </html>
