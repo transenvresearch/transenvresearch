@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about TECRC - Translational Environmental Clinical Research Center and our mission to connect environmental science with clinical medicine.">
     <title>About Us - TECRC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,6 +19,11 @@
                 <p class="tagline">Translational Environmental Clinical Research Center</p>
             </div>
             <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About Us</a></li>
@@ -31,6 +38,9 @@
     <section class="page-header">
         <div class="container">
             <h1>About Us</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>About Us</span>
+            </div>
         </div>
     </section>
 
@@ -41,9 +51,23 @@
                     <h2>Our Story</h2>
                     <p>The Translational Environmental Clinical Research Center (TECRC) was founded with a clear vision: to bridge the gap between environmental science and clinical medicine. We recognized the growing need for research that directly connects environmental factors to human health outcomes and translates those findings into practical medical applications.</p>
                     <p>As a 501(c)(3) non-profit organization, we are dedicated to conducting scientific research, developing evidence-based recommendations, and educating both healthcare professionals and the public about the critical relationships between our environment and health.</p>
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Research Projects</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Partner Organizations</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/about-image.jpg" alt="TECRC researchers in laboratory">
+                    <img src="images/about-image.jpg" alt="TECRC researchers in laboratory studying environmental impacts on health" loading="lazy">
                 </div>
             </div>
         </div>
@@ -52,10 +76,16 @@
     <section class="mission-vision">
         <div class="container">
             <div class="mission-box">
+                <div class="icon-container">
+                    <img src="images/mission-icon.svg" alt="" aria-hidden="true">
+                </div>
                 <h2>Our Mission</h2>
                 <p>To conduct rigorous scientific research on environmental impacts on human health, develop evidence-based recommendations for clinical practice, and educate healthcare providers and the public about these critical relationships.</p>
             </div>
             <div class="vision-box">
+                <div class="icon-container">
+                    <img src="images/vision-icon.svg" alt="" aria-hidden="true">
+                </div>
                 <h2>Our Vision</h2>
                 <p>A world where environmental factors are routinely considered in clinical diagnosis, treatment, and prevention strategies, leading to improved health outcomes and reduced environmentally-induced disease burden.</p>
             </div>
@@ -65,20 +95,33 @@
     <section class="core-values">
         <div class="container">
             <h2>Our Core Values</h2>
+            <p class="section-intro">These principles guide our research, partnerships, and community engagement:</p>
             <div class="values-grid">
                 <div class="value-item">
+                    <div class="value-icon">
+                        <img src="images/integrity-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Scientific Integrity</h3>
                     <p>We uphold the highest standards of scientific rigor in all our research, ensuring that our findings are robust, reproducible, and trustworthy.</p>
                 </div>
                 <div class="value-item">
+                    <div class="value-icon">
+                        <img src="images/translation-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Translational Focus</h3>
                     <p>We are committed to converting scientific discoveries into practical applications that can be implemented in clinical settings and public health initiatives.</p>
                 </div>
                 <div class="value-item">
+                    <div class="value-icon">
+                        <img src="images/collaboration-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Interdisciplinary Collaboration</h3>
                     <p>We bring together experts from diverse fields—environmental science, medicine, epidemiology, toxicology, and public health—to address complex health challenges.</p>
                 </div>
                 <div class="value-item">
+                    <div class="value-icon">
+                        <img src="images/accessibility-icon.svg" alt="" aria-hidden="true">
+                    </div>
                     <h3>Accessibility</h3>
                     <p>We make our research findings and recommendations accessible to healthcare providers, policymakers, and the public through clear, understandable communication.</p>
                 </div>
@@ -88,40 +131,82 @@
 
     <section class="team">
         <div class="container">
-            <h2>Our Team</h2>
+            <h2>Our Leadership Team</h2>
             <p class="team-intro">TECRC brings together a diverse team of researchers, clinicians, and educators dedicated to understanding and addressing environmental health impacts.</p>
             
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-image"></div>
+                    <div class="member-image">
+                        <img src="images/team-smith.jpg" alt="Portrait of Dr. Jane Smith" loading="lazy">
+                    </div>
                     <h3>Dr. Jane Smith</h3>
                     <p class="member-title">Executive Director, MD, PhD</p>
                     <p>Specializing in environmental epidemiology with a focus on respiratory health outcomes.</p>
+                    <div class="member-links">
+                        <a href="#" aria-label="View Dr. Jane Smith's LinkedIn profile">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                        </a>
+                        <a href="#" aria-label="View Dr. Jane Smith's publications">
+                            <img src="images/publications-icon.svg" alt="Publications" width="20" height="20">
+                        </a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-image"></div>
+                    <div class="member-image">
+                        <img src="images/team-johnson.jpg" alt="Portrait of Dr. David Johnson" loading="lazy">
+                    </div>
                     <h3>Dr. David Johnson</h3>
                     <p class="member-title">Research Director, PhD</p>
                     <p>Expert in toxicology and environmental exposure assessment with 15+ years of experience.</p>
+                    <div class="member-links">
+                        <a href="#" aria-label="View Dr. David Johnson's LinkedIn profile">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                        </a>
+                        <a href="#" aria-label="View Dr. David Johnson's publications">
+                            <img src="images/publications-icon.svg" alt="Publications" width="20" height="20">
+                        </a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-image"></div>
+                    <div class="member-image">
+                        <img src="images/team-rodriguez.jpg" alt="Portrait of Dr. Maria Rodriguez" loading="lazy">
+                    </div>
                     <h3>Dr. Maria Rodriguez</h3>
                     <p class="member-title">Clinical Director, MD, MPH</p>
                     <p>Specializes in translating environmental research into clinical practice guidelines.</p>
+                    <div class="member-links">
+                        <a href="#" aria-label="View Dr. Maria Rodriguez's LinkedIn profile">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                        </a>
+                        <a href="#" aria-label="View Dr. Maria Rodriguez's publications">
+                            <img src="images/publications-icon.svg" alt="Publications" width="20" height="20">
+                        </a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="member-image"></div>
+                    <div class="member-image">
+                        <img src="images/team-chen.jpg" alt="Portrait of Dr. Robert Chen" loading="lazy">
+                    </div>
                     <h3>Dr. Robert Chen</h3>
                     <p class="member-title">Education Director, PhD</p>
                     <p>Leads our public education initiatives and professional development programs.</p>
+                    <div class="member-links">
+                        <a href="#" aria-label="View Dr. Robert Chen's LinkedIn profile">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                        </a>
+                        <a href="#" aria-label="View Dr. Robert Chen's publications">
+                            <img src="images/publications-icon.svg" alt="Publications" width="20" height="20">
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <div class="join-team">
-                <h3>Join Our Team</h3>
-                <p>We're always looking for passionate researchers, clinicians, and support staff who share our commitment to environmental health. View our current opportunities or contact us to learn more.</p>
-                <a href="contact.html#careers" class="btn">View Opportunities</a>
+                <div class="join-team-content">
+                    <h3>Join Our Team</h3>
+                    <p>We're always looking for passionate researchers, clinicians, and support staff who share our commitment to environmental health. View our current opportunities or contact us to learn more.</p>
+                    <a href="contact.html#careers" class="btn">View Opportunities</a>
+                </div>
             </div>
         </div>
     </section>
@@ -129,14 +214,32 @@
     <section class="partners">
         <div class="container">
             <h2>Our Partners</h2>
-            <p>TECRC collaborates with leading institutions and organizations to advance environmental health research and implementation.</p>
+            <p class="section-intro">TECRC collaborates with leading institutions and organizations to advance environmental health research and implementation.</p>
             <div class="partners-grid">
-                <div class="partner">University Medical Centers</div>
-                <div class="partner">Environmental Protection Agencies</div>
-                <div class="partner">Public Health Departments</div>
-                <div class="partner">Community Health Organizations</div>
-                <div class="partner">Research Institutions</div>
-                <div class="partner">Healthcare Systems</div>
+                <div class="partner">
+                    <img src="images/partner-university.svg" alt="University Medical Centers logo" loading="lazy">
+                    <span>University Medical Centers</span>
+                </div>
+                <div class="partner">
+                    <img src="images/partner-epa.svg" alt="Environmental Protection Agencies logo" loading="lazy">
+                    <span>Environmental Protection Agencies</span>
+                </div>
+                <div class="partner">
+                    <img src="images/partner-health.svg" alt="Public Health Departments logo" loading="lazy">
+                    <span>Public Health Departments</span>
+                </div>
+                <div class="partner">
+                    <img src="images/partner-community.svg" alt="Community Health Organizations logo" loading="lazy">
+                    <span>Community Health Organizations</span>
+                </div>
+                <div class="partner">
+                    <img src="images/partner-research.svg" alt="Research Institutions logo" loading="lazy">
+                    <span>Research Institutions</span>
+                </div>
+                <div class="partner">
+                    <img src="images/partner-healthcare.svg" alt="Healthcare Systems logo" loading="lazy">
+                    <span>Healthcare Systems</span>
+                </div>
             </div>
         </div>
     </section>
@@ -148,6 +251,23 @@
             <div class="cta-buttons">
                 <a href="contact.html#volunteer" class="btn">Get Involved</a>
                 <a href="contact.html#donate" class="btn btn-alt">Make a Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Informed</h3>
+                    <p>Subscribe to our newsletter for updates on our research, events, and publications.</p>
+                </div>
+                <form class="newsletter-form" action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
@@ -175,8 +295,12 @@
                     <p>Email: info@tecrc.org</p>
                     <p>Phone: (555) 123-4567</p>
                     <div class="social-links">
-                        <a href="#" target="_blank">Twitter</a>
-                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank" aria-label="Follow us on Twitter">
+                            <img src="images/twitter-icon.svg" alt="Twitter" width="24" height="24">
+                        </a>
+                        <a href="#" target="_blank" aria-label="Connect with us on LinkedIn">
+                            <img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -185,5 +309,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <img src="images/arrow-up.svg" alt="" aria-hidden="true">
+    </button>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
