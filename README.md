@@ -107,6 +107,5 @@ tecrc-website/
 
 ## Contact Information
 
-For questions about this website template or for help with customization, please contact your web developer.
 
 For information about TECRC, please use the contact information provided on the Contact page.
