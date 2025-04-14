@@ -366,3 +366,78 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Add these styles to your styles.css file */
+
+/* Team Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Team Member Card */
+.team-member {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Member Image */
+.member-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Focus on the face */
+}
+
+/* Team Member Information */
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    color: #1d3557;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    color: #457b9d;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.member-links {
+    margin-top: 1rem;
+}
+
+.member-links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
