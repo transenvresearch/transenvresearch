@@ -457,3 +457,50 @@ footer {
         height: 300px; /* Larger height on mobile for better visibility */
     }
 }
+
+/* Add these styles to your additional-styles.css file */
+
+/* Fix for oversized contact phone icon */
+.location img[src*="phone-icon"], 
+img[src*="phone.svg"],
+.contact-icon img {
+    max-width: 24px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Additional styling for phone icon circle container if needed */
+.phone-icon-container {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.phone-icon-container img {
+    width: 40px;
+    height: 40px;
+}
+
+/* In case the phone icon is an SVG directly in the HTML */
+.phone-icon-svg {
+    max-width: 80px;
+    height: auto;
+}
+
+/* For the large circular phone icon in the contact page */
+.contact-circular-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+}
+
+.contact-circular-icon img {
+    max-width: 100%;
+    height: auto;
+}
