@@ -509,3 +509,29 @@ img[src*="phone-icon.svg"] {
     max-width: 40px;
     height: auto;
 }
+
+/* fix email for contact card */
+.contact-card p {
+    word-break: break-word; /* Allows breaking of long words */
+    overflow-wrap: break-word; /* Ensures text wraps within container */
+}
+
+.contact-card a {
+    display: inline-block;
+    max-width: 100%; /* Ensures links don't overflow */
+    overflow-wrap: break-word;
+}
+
+/*fix oversized image container*/
+.map-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.map-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust this value as needed */
+    object-fit: cover;
+    border-radius: 8px;
+}
